@@ -15,9 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//List accommodations
+Route::get('/accommodations','AccommodationController@index');
+
+
+//List rooms
+Route::get('/rooms','RoomController@index');
+
+
 Route::get('/demo', function () {
     return view('demo');
 });
+
+
+Route::resource('bookings', 'BookingController');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
