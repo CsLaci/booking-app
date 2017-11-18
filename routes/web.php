@@ -29,6 +29,7 @@ Route::get('/demo', function () {
 
 
 Route::resource('bookings', 'BookingController');
+Route::resource('accommodations', 'AccommodationController');
 
 
 Auth::routes();

@@ -16,7 +16,7 @@
         <tr>
             <td> {{ $room->id }} </td>
             <td> {{ $room->title }} </td>
-            <td> {{ $room->accommodation_id }} </td>
+            <td> {{ $room->accommodation->title }} </td>
             <td> 
             
              </td>
