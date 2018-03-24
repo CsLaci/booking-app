@@ -4,6 +4,8 @@
 
     <h1>Accomodations</h1>
 
+    <a href="/accommodations/create">Create</a>
+
     <table class="table table-bordered">
         <tr>
             <th> ID </th>
@@ -16,12 +18,16 @@
     @foreach ($accommodations as $accommodation)
         <tr>
             <td> {{ $accommodation->id }} </td>
-            <td> {{ $accommodation->title }} </td>
+            <td> 
+                <a href="/accommodations/{{ $accommodation->id }}">
+                    {{ $accommodation->title }} 
+                </a>
+            </td>
             <td> {{ $accommodation->description }} </td>
             <td> {{ $accommodation->rooms->count() }} </td>
             <td> 
-            
-             </td>
+                <a href="/accommodations/{{ $accommodation->id }}/edit" class="btn btn-primary">Edit</a>
+            </td>
         </tr>
     @endforeach
     </table>

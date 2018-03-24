@@ -42,6 +42,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
+                            <li><a href="/bookings/create">Book now</a></li>
+                            <li><a href="/bookings">Bookings</a></li>
+                            <li><a href="/accommodations">Accommodations</a></li>
+
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
