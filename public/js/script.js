@@ -8,7 +8,7 @@ jQuery(document).ready(function(){
  function getLatLong(addressInput) {
     var address = encodeURI(addressInput);
 
-    jQuery.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&key=AIzaSyB3XcOM5gbQx5zQMqlEtK6mugNeNNzRpNA', function(response){
+    jQuery.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&key=', function(response){
         
         var location = response.results[0].geometry.location;
        
