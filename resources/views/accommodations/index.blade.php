@@ -10,6 +10,7 @@
         <tr>
             <th> ID </th>
             <th> Title </th>
+            <th> City </th>
             <th> Description </th>
             <th> Nr rooms </th>
             <th> Actions </th>
@@ -23,6 +24,7 @@
                     {{ $accommodation->title }} 
                 </a>
             </td>
+            <td> {{ $accommodation->city }} </td>
             <td> {{ $accommodation->description }} </td>
             <td> {{ $accommodation->rooms->count() }} </td>
             <td> 

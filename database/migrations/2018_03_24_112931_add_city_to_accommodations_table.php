@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBookingTable extends Migration
+class AddCityToAccommodationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateBookingTable extends Migration
      */
     public function up()
     {
-        Schema::create('bookings', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::table('accommodations', function (Blueprint $table) {
+            $table->string('city');
         });
     }
 
@@ -26,6 +25,8 @@ class CreateBookingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bookings');
+        Schema::table('accommodations', function (Blueprint $table) {
+            $table->dropColumn('city');
+        });
     }
 }

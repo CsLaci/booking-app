@@ -9,8 +9,11 @@
         {{ csrf_field() }}
 
         <p>
-            <input type="text" name="title">
+            Title: <input type="text" name="title">
         </p>
+        <p>
+            City: <input type="text" name="city">
+        <p>
         <p>
             Description: <input type="text" name="description">
         <p>
